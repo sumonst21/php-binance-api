@@ -140,7 +140,7 @@ class API
      */
     protected function setupApiConfigFromFile(string $file = null)
     {
-        $file = is_null($file) ? getenv("HOME") . "/.config/jaggedsoft/php-binance-api.json" : $file;
+        $file = is_null($file) ? getenv("DOCUMENT_ROOT") . "/php-binance-api.json" : $file;
 
         if (empty($this->api_key) === false || empty($this->api_secret) === false) {
             return;
@@ -166,7 +166,7 @@ class API
      */
     protected function setupCurlOptsFromFile(string $file = null)
     {
-        $file = is_null($file) ? getenv("HOME") . "/.config/jaggedsoft/php-binance-api.json" : $file;
+        $file = is_null($file) ? getenv("DOCUMENT_ROOT") . "/php-binance-api.json" : $file;
 
         if (count($this->curlOpts) > 0) {
             return;
@@ -189,7 +189,7 @@ class API
      */
     protected function setupProxyConfigFromFile(string $file = null)
     {
-        $file = is_null($file) ? getenv("HOME") . "/.config/jaggedsoft/php-binance-api.json" : $file;
+        $file = is_null($file) ? getenv("DOCUMENT_ROOT") . "/php-binance-api.json" : $file;
 
         if (is_null($this->proxyConf) === false) {
             return;
